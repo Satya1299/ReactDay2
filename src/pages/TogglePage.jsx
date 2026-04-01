@@ -27,25 +27,25 @@ export default function TogglePage({ setPage }) {
       />
 
       <div style={{ position: "relative", zIndex: 1 }}>
-    {/* ✅ BACK BUTTON HERE */}
-      <button
-        onClick={() => setPage("home")}
-        style={{
-          position: "absolute",
-          top: "20px",
-          left: "20px",
-          padding: "10px 18px",
-          background: "rgba(255,255,255,0.05)",
-          border: "1px solid rgba(255,255,255,0.1)",
-          color: "#aaa",
-          borderRadius: "10px",
-          cursor: "pointer",
-          fontSize: "12px",
-          letterSpacing: "1px"
-        }}
-      >
-        ← BACK TO HOME
-      </button>
+        {/* ✅ BACK BUTTON HERE */}
+        <button
+          onClick={() => setPage("home")}
+          style={{
+            position: "absolute",
+            top: "20px",
+            left: "20px",
+            padding: "10px 18px",
+            background: "rgba(255,255,255,0.05)",
+            border: "1px solid rgba(255,255,255,0.1)",
+            color: "#aaa",
+            borderRadius: "10px",
+            cursor: "pointer",
+            fontSize: "12px",
+            letterSpacing: "1px",
+          }}
+        >
+          ← BACK TO HOME
+        </button>
 
         {/* HEADER */}
         <div style={{ textAlign: "center", marginTop: "40px" }}>
@@ -176,9 +176,7 @@ export default function TogglePage({ setPage }) {
                   height: "32px",
                   borderRadius: "50%",
                   background: "#fff",
-                  transform: isDay
-                    ? "translateX(50px)"
-                    : "translateX(0px)",
+                  transform: isDay ? "translateX(50px)" : "translateX(0px)",
                   transition: "all 0.4s ease",
                   display: "flex",
                   alignItems: "center",

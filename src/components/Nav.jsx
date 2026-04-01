@@ -1,12 +1,12 @@
 export default function Nav({ page, setPage }) {
   const items = [
-    { name: "Home", key: "home" },
-    { name: "01 Button", key: "button" },
-    { name: "02 Toggle", key: "toggle" },
-    { name: "03 Mirror", key: "text" },
-    { name: "04 Hover", key: "hover" },
-    { name: "05 Traffic", key: "traffic" },
-    { name: "06 Todo", key: "todo" },
+    // { name: "Home", key: "home" },
+    { name: "Button", key: "button" },
+    { name: "Toggle", key: "toggle" },
+    { name: "Mirror", key: "text" },
+    { name: "Hover", key: "hover" },
+    { name: "Traffic", key: "traffic" },
+    { name: "Todo", key: "todo" },
   ];
 
   return (
@@ -24,28 +24,29 @@ export default function Nav({ page, setPage }) {
         alignItems: "center",
         padding: "0 40px",
         zIndex: 100,
-        borderBottom: "1px solid rgba(255,255,255,0.05)"
+        borderBottom: "1px solid rgba(255,255,255,0.05)",
       }}
     >
-      {/* LOGO */}
+      {/* React Logo */}
       <h2 style={{ fontWeight: "900" }}>
-        React<span style={{ color: "#facc15" }}>Lab</span>
+        REACT<span style={{ color: "#facc15" }}></span>
       </h2>
 
-      {/* NAV ITEMS */}
+      {/* Navigation Items */}
       <div style={{ display: "flex", gap: "20px" }}>
         {items.map((item) => (
           <button
             key={item.key}
             onClick={() => setPage(item.key)}
             style={{
-              background: page === item.key ? "rgba(255,255,255,0.1)" : "transparent",
+              background:
+                page === item.key ? "rgba(255,255,255,0.1)" : "transparent",
               border: "1px solid rgba(255,255,255,0.1)",
               padding: "8px 14px",
               borderRadius: "10px",
               color: "#aaa",
               cursor: "pointer",
-              transition: "0.3s"
+              transition: "0.3s",
             }}
           >
             {item.name}

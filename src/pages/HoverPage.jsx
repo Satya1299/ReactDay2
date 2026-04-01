@@ -29,27 +29,26 @@ export default function HoverPage({ setPage }) {
 
       {/* ✅ BACK BUTTON HERE */}
       <button
-  onClick={() => setPage("home")}
-  style={{
-    position: "absolute",
-    top: "20px",
-    left: "20px",
-    padding: "10px 18px",
-    background: "rgba(255,255,255,0.05)",
-    border: "1px solid rgba(255,255,255,0.1)",
-    color: "#aaa",
-    borderRadius: "10px",
-    cursor: "pointer",
-    fontSize: "12px",
-    letterSpacing: "1px",
-    zIndex: 10 // ✅ IMPORTANT
-  }}
->
+        onClick={() => setPage("home")}
+        style={{
+          position: "absolute",
+          top: "20px",
+          left: "20px",
+          padding: "10px 18px",
+          background: "rgba(255,255,255,0.05)",
+          border: "1px solid rgba(255,255,255,0.1)",
+          color: "#aaa",
+          borderRadius: "10px",
+          cursor: "pointer",
+          fontSize: "12px",
+          letterSpacing: "1px",
+          zIndex: 10, // ✅ IMPORTANT
+        }}
+      >
         ← BACK TO HOME
       </button>
 
-
-      {/* 🔥 CONTENT */}
+      {/* CONTENT */}
       <div
         style={{
           position: "relative",
@@ -59,9 +58,7 @@ export default function HoverPage({ setPage }) {
         }}
       >
         {/* TITLE */}
-        <p style={{ color: "#3b82f6", letterSpacing: "2px" }}>
-          EXERCISE 04
-        </p>
+        <p style={{ color: "#3b82f6", letterSpacing: "2px" }}>EXERCISE 04</p>
 
         <h1
           style={{
@@ -74,8 +71,8 @@ export default function HoverPage({ setPage }) {
         </h1>
 
         <p style={{ opacity: 0.6, marginBottom: "40px" }}>
-          A div using <code>onMouseEnter</code> and{" "}
-          <code>onMouseLeave</code> to switch background color
+          A div using <code>onMouseEnter</code> and <code>onMouseLeave</code> to
+          switch background color
         </p>
 
         {/* 🔥 CARD */}
@@ -122,9 +119,7 @@ export default function HoverPage({ setPage }) {
               }}
             />
 
-            <h2>
-              {hovered ? "Mouse Entered!" : "Hover Over Me"}
-            </h2>
+            <h2>{hovered ? "Mouse Entered!" : "Hover Over Me"}</h2>
 
             <p style={{ fontSize: "12px", opacity: 0.7 }}>
               {hovered ? "onMouseEnter fired" : "onMouseLeave fired"}
@@ -138,15 +133,12 @@ export default function HoverPage({ setPage }) {
               padding: "8px 16px",
               borderRadius: "999px",
               display: "inline-block",
-              border: `1px solid ${
-                hovered ? "#ff4d4d" : "#3b82f6"
-              }`,
+              border: `1px solid ${hovered ? "#ff4d4d" : "#3b82f6"}`,
               color: hovered ? "#ff4d4d" : "#3b82f6",
               fontSize: "12px",
             }}
           >
-            ● Current state:{" "}
-            {hovered ? "RED (hovered)" : "BLUE (idle)"}
+            ● Current state: {hovered ? "RED (hovered)" : "BLUE (idle)"}
           </div>
         </div>
       </div>

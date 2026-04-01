@@ -1,5 +1,7 @@
 import { useState } from "react";
 
+import Nav from "./components/Nav";
+
 import HomePage from "./pages/HomePage";
 import ButtonPage from "./pages/ButtonPage";
 import TogglePage from "./pages/TogglePage";
@@ -30,5 +32,11 @@ export default function App() {
     }
   }
 
-  return <div>{renderPage()}</div>;
+  return (
+    <div>
+      {/*For Navigation To*/}
+      <Nav page={page} setPage={setPage} />
+      <div style={{ paddingTop: "80px" }}>{renderPage()}</div>
+    </div>
+  );
 }

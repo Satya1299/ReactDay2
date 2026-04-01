@@ -25,11 +25,11 @@ export default function TrafficPage({ setPage }) {
           `,
           backgroundSize: "40px 40px",
           zIndex: 0,
-          pointerEvents: "none"
+          pointerEvents: "none",
         }}
       />
 
-  {/* ✅ BACK BUTTON HERE */}
+      {/* BACK BUTTON HERE */}
       <button
         onClick={() => setPage("home")}
         style={{
@@ -43,12 +43,11 @@ export default function TrafficPage({ setPage }) {
           borderRadius: "10px",
           cursor: "pointer",
           fontSize: "12px",
-          letterSpacing: "1px"
+          letterSpacing: "1px",
         }}
       >
         ← BACK TO HOME
       </button>
-
 
       {/* MAIN CONTENT */}
       <div
@@ -61,9 +60,7 @@ export default function TrafficPage({ setPage }) {
           textAlign: "center",
         }}
       >
-        <p style={{ color: "#a855f7", letterSpacing: "2px" }}>
-          EXERCISE 05
-        </p>
+        <p style={{ color: "#a855f7", letterSpacing: "2px" }}>EXERCISE 05</p>
 
         <h1
           style={{
@@ -108,12 +105,9 @@ export default function TrafficPage({ setPage }) {
                   height: "40px",
                   borderRadius: "50%",
                   margin: "10px auto",
-                  background:
-                    color === c ? c : "rgba(255,255,255,0.1)",
+                  background: color === c ? c : "rgba(255,255,255,0.1)",
                   boxShadow:
-                    color === c
-                      ? `0 0 20px ${c}, 0 0 40px ${c}`
-                      : "none",
+                    color === c ? `0 0 20px ${c}, 0 0 40px ${c}` : "none",
                   transition: "0.3s",
                 }}
               />
@@ -128,15 +122,15 @@ export default function TrafficPage({ setPage }) {
                 color === "red"
                   ? "#ef4444"
                   : color === "yellow"
-                  ? "#facc15"
-                  : "#22c55e",
+                    ? "#facc15"
+                    : "#22c55e",
             }}
           >
             {color === "red"
               ? "⛔ Stop"
               : color === "yellow"
-              ? "⚠ Slow Down"
-              : "✅ Go"}
+                ? "⚠ Slow Down"
+                : "✅ Go"}
           </h2>
 
           {/* BUTTONS */}
@@ -153,12 +147,8 @@ export default function TrafficPage({ setPage }) {
                   margin: "10px",
                   background: c,
                   cursor: "pointer",
-                  transform:
-                    color === c ? "scale(1.3)" : "scale(1)",
-                  boxShadow:
-                    color === c
-                      ? `0 0 10px ${c}`
-                      : "none",
+                  transform: color === c ? "scale(1.3)" : "scale(1)",
+                  boxShadow: color === c ? `0 0 10px ${c}` : "none",
                 }}
               />
             ))}

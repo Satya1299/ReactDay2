@@ -12,19 +12,12 @@ export default function TodoPage({ setPage }) {
 
   const addTodo = () => {
     if (!input.trim()) return;
-    setTodos([
-      { id: Date.now(), text: input, done: false },
-      ...todos,
-    ]);
+    setTodos([{ id: Date.now(), text: input, done: false }, ...todos]);
     setInput("");
   };
 
   const toggleTodo = (id) => {
-    setTodos(
-      todos.map((t) =>
-        t.id === id ? { ...t, done: !t.done } : t
-      )
-    );
+    setTodos(todos.map((t) => (t.id === id ? { ...t, done: !t.done } : t)));
   };
 
   const removeTodo = (id) => {
@@ -58,7 +51,7 @@ export default function TodoPage({ setPage }) {
         }}
       />
 
- {/* ✅ BACK BUTTON HERE */}
+      {/* ✅ BACK BUTTON HERE */}
       <button
         onClick={() => setPage("home")}
         style={{
@@ -72,14 +65,13 @@ export default function TodoPage({ setPage }) {
           borderRadius: "10px",
           cursor: "pointer",
           fontSize: "12px",
-          letterSpacing: "1px"
+          letterSpacing: "1px",
         }}
       >
         ← BACK TO HOME
       </button>
 
-
-      {/* 🔥 MAIN CONTENT */}
+      {/* MAIN CONTENT */}
       <div
         style={{
           position: "relative",
@@ -89,13 +81,9 @@ export default function TodoPage({ setPage }) {
           paddingTop: "120px",
         }}
       >
-        <p style={{ color: "#f59e0b", letterSpacing: "2px" }}>
-          EXERCISE 06
-        </p>
+        <p style={{ color: "#f59e0b", letterSpacing: "2px" }}>EXERCISE 06</p>
 
-        <h1 style={{ fontSize: "3rem", marginBottom: "10px" }}>
-          Todo List
-        </h1>
+        <h1 style={{ fontSize: "3rem", marginBottom: "10px" }}>Todo List</h1>
 
         <p style={{ opacity: 0.6, marginBottom: "30px" }}>
           Add tasks and manage your list dynamically
@@ -112,8 +100,7 @@ export default function TodoPage({ setPage }) {
         >
           {/* STATS */}
           <div style={{ marginBottom: "10px", opacity: 0.7 }}>
-            {total} total &nbsp; {done} done &nbsp;{" "}
-            {total - done} remaining
+            {total} total &nbsp; {done} done &nbsp; {total - done} remaining
           </div>
 
           {/* INPUT */}
@@ -165,9 +152,7 @@ export default function TodoPage({ setPage }) {
                   onClick={() => toggleTodo(t.id)}
                   style={{
                     cursor: "pointer",
-                    textDecoration: t.done
-                      ? "line-through"
-                      : "none",
+                    textDecoration: t.done ? "line-through" : "none",
                     opacity: t.done ? 0.5 : 1,
                   }}
                 >
