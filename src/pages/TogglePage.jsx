@@ -27,8 +27,8 @@ export default function TogglePage({ setPage }) {
       />
 
       <div style={{ position: "relative", zIndex: 1 }}>
-         {/* ✅ BACK BUTTON HERE */}
-      {/* <button
+    {/* ✅ BACK BUTTON HERE */}
+      <button
         onClick={() => setPage("home")}
         style={{
           position: "absolute",
@@ -45,7 +45,7 @@ export default function TogglePage({ setPage }) {
         }}
       >
         ← BACK TO HOME
-      </button> */}
+      </button>
 
         {/* HEADER */}
         <div style={{ textAlign: "center", marginTop: "40px" }}>

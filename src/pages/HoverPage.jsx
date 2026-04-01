@@ -27,25 +27,27 @@ export default function HoverPage({ setPage }) {
         }}
       />
 
-      {/* 🔥 BACK BUTTON */}
+      {/* ✅ BACK BUTTON HERE */}
       <button
-        onClick={() => setPage("home")}
-        style={{
-          position: "fixed",
-          top: "80px",
-          left: "30px",
-          zIndex: 9999,
-          padding: "10px 16px",
-          borderRadius: "10px",
-          border: "1px solid rgba(255,255,255,0.2)",
-          background: "rgba(0,0,0,0.4)",
-          color: "#fff",
-          cursor: "pointer",
-          backdropFilter: "blur(10px)",
-        }}
-      >
+  onClick={() => setPage("home")}
+  style={{
+    position: "absolute",
+    top: "20px",
+    left: "20px",
+    padding: "10px 18px",
+    background: "rgba(255,255,255,0.05)",
+    border: "1px solid rgba(255,255,255,0.1)",
+    color: "#aaa",
+    borderRadius: "10px",
+    cursor: "pointer",
+    fontSize: "12px",
+    letterSpacing: "1px",
+    zIndex: 10 // ✅ IMPORTANT
+  }}
+>
         ← BACK TO HOME
       </button>
+
 
       {/* 🔥 CONTENT */}
       <div

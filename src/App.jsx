@@ -1,5 +1,4 @@
 import { useState } from "react";
-import Nav from "./components/Nav";
 
 import HomePage from "./pages/HomePage";
 import ButtonPage from "./pages/ButtonPage";
@@ -12,23 +11,24 @@ import TodoPage from "./pages/TodoPage";
 export default function App() {
   const [page, setPage] = useState("home");
 
-  const renderPage = () => {
+  function renderPage() {
     switch (page) {
-      case "button": return <ButtonPage />;
-      case "toggle": return <TogglePage />;
-      case "text": return <TextPage />;
-      case "hover": return <HoverPage />;
-      case "traffic": return <TrafficPage />;
-      case "todo": return <TodoPage />;
-      default: return <HomePage setPage={setPage} />;
+      case "button":
+        return <ButtonPage setPage={setPage} />;
+      case "toggle":
+        return <TogglePage setPage={setPage} />;
+      case "text":
+        return <TextPage setPage={setPage} />;
+      case "hover":
+        return <HoverPage setPage={setPage} />;
+      case "traffic":
+        return <TrafficPage setPage={setPage} />;
+      case "todo":
+        return <TodoPage setPage={setPage} />;
+      default:
+        return <HomePage setPage={setPage} />;
     }
-  };
+  }
 
-  return (
-    <>
-      <Nav page={page} setPage={setPage} />
-      {renderPage()}
-      {/* <TextPage setPage={setPage} /> */}
-    </>
-  );
+  return <div>{renderPage()}</div>;
 }

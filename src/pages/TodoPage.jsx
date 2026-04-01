@@ -58,25 +58,26 @@ export default function TodoPage({ setPage }) {
         }}
       />
 
-      {/* 🔥 BACK BUTTON
+ {/* ✅ BACK BUTTON HERE */}
       <button
         onClick={() => setPage("home")}
         style={{
-          position: "fixed",
-          top: "80px",
-          left: "30px",
-          zIndex: 99999,
-          padding: "10px 16px",
+          position: "absolute",
+          top: "20px",
+          left: "20px",
+          padding: "10px 18px",
+          background: "rgba(255,255,255,0.05)",
+          border: "1px solid rgba(255,255,255,0.1)",
+          color: "#aaa",
           borderRadius: "10px",
-          border: "1px solid rgba(255,255,255,0.2)",
-          background: "rgba(0,0,0,0.4)",
-          color: "#fff",
           cursor: "pointer",
-          backdropFilter: "blur(10px)",
+          fontSize: "12px",
+          letterSpacing: "1px"
         }}
       >
         ← BACK TO HOME
-      </button> */}
+      </button>
+
 
       {/* 🔥 MAIN CONTENT */}
       <div

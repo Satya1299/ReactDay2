@@ -28,22 +28,24 @@ export default function TextPage({ setPage }) {
         }}
       />
 
-      {/* BACK BUTTON */}
+       {/* ✅ BACK BUTTON HERE */}
       <button
-        onClick={() => setPage("home")}
-        style={{
-          position: "absolute",
-          top: "20px",
-          left: "20px",
-          padding: "10px 16px",
-          background: "rgba(255,255,255,0.05)",
-          border: "1px solid rgba(255,255,255,0.1)",
-          color: "#aaa",
-          borderRadius: "10px",
-          cursor: "pointer",
-          zIndex: 2
-        }}
-      >
+  onClick={() => setPage("home")}
+  style={{
+    position: "absolute",
+    top: "20px",
+    left: "20px",
+    padding: "10px 18px",
+    background: "rgba(255,255,255,0.05)",
+    border: "1px solid rgba(255,255,255,0.1)",
+    color: "#aaa",
+    borderRadius: "10px",
+    cursor: "pointer",
+    fontSize: "12px",
+    letterSpacing: "1px",
+    zIndex: 10 // ✅ IMPORTANT
+  }}
+>
         ← BACK TO HOME
       </button>
 

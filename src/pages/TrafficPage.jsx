@@ -29,24 +29,26 @@ export default function TrafficPage({ setPage }) {
         }}
       />
 
-      {/* BACK BUTTON */}
+  {/* ✅ BACK BUTTON HERE */}
       <button
         onClick={() => setPage("home")}
         style={{
           position: "absolute",
-          top: "100px",
-          left: "40px",
+          top: "20px",
+          left: "20px",
+          padding: "10px 18px",
           background: "rgba(255,255,255,0.05)",
           border: "1px solid rgba(255,255,255,0.1)",
-          padding: "10px 18px",
-          borderRadius: "10px",
           color: "#aaa",
+          borderRadius: "10px",
           cursor: "pointer",
-          zIndex: 10
+          fontSize: "12px",
+          letterSpacing: "1px"
         }}
       >
         ← BACK TO HOME
       </button>
+
 
       {/* MAIN CONTENT */}
       <div
